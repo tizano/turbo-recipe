@@ -11,6 +11,8 @@
     "dev": "turbo dev",
     "start": "turbo dev",
     "build": "turbo build",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo clean",
     "check-types": "turbo check-types",
     "dev:native": "turbo -F native dev",
     "dev:web": "turbo -F web dev",
@@ -18,14 +20,11 @@
     "db:push": "turbo -F server db:push",
     "db:studio": "turbo -F server db:studio",
     "db:generate": "turbo -F server db:generate",
-    "db:migrate": "turbo -F server db:migrate",
-    "graph": "turbo-graph"
+    "db:migrate": "turbo -F server db:migrate"
   },
   "dependencies": {},
   "devDependencies": {
     "@biomejs/biome": "^2.2.0",
-    "@yeger/turbo-graph": "^2.3.0",
-    "@yeger/turbo-graph-ui": "^2.4.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "turbo": "^2.5.4"

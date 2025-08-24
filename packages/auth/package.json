@@ -1,0 +1,16 @@
+{
+  "name": "@turbo-recipe/auth",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules"
+  },
+  "dependencies": {
+    "@turbo-recipe/database": "workspace:*",
+    "better-auth": "^1.3.4",
+    "dotenv": "^17.2.1"
+  },
+  "devDependencies": {
+    "@turbo-recipe/tsconfig": "workspace:*"
+  }
+}

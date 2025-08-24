@@ -1,9 +1,9 @@
-import 'dotenv/config';
 import { RPCHandler } from '@orpc/server/fetch';
+import 'dotenv/config';
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import { logger } from 'hono/logger';
-import { auth } from './lib/auth';
+// import { auth } from '@';
 import { createContext } from './lib/context';
 import { appRouter } from './routers/index';
 
@@ -20,7 +20,7 @@ app.use(
   }),
 );
 
-app.on(['POST', 'GET'], '/api/auth/**', (c) => auth.handler(c.req.raw));
+// app.on(['POST', 'GET'], '/api/auth/**', (c) => auth.handler(c.req.raw));
 
 const handler = new RPCHandler(appRouter);
 app.use('/rpc/*', async (c, next) => {
